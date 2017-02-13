@@ -15,13 +15,13 @@ private[logger] trait Log4JavaScript extends js.Object {
 
 @js.native
 private[logger] trait Level extends js.Object {
-  val ALL:Level = js.native
-  val TRACE:Level = js.native
-  val DEBUG:Level = js.native
-  val INFO:Level = js.native
-  val WARN:Level = js.native
-  val ERROR:Level = js.native
-  val FATAL:Level = js.native
+  def ALL:Level = js.native
+  def TRACE:Level = js.native
+  def DEBUG:Level = js.native
+  def INFO:Level = js.native
+  def WARN:Level = js.native
+  def ERROR:Level = js.native
+  def FATAL:Level = js.native
 }
 
 @js.native
@@ -75,7 +75,7 @@ private[logger] class AjaxAppender(url:String) extends Appender {
 @js.native
 @js.annotation.JSGlobalScope
 private[logger] object Log4JavaScript extends js.Object {
-  val log4javascript:Log4JavaScript = js.native
+  def log4javascript:Log4JavaScript = js.native
 }
 
 class L4JSLogger(jsLogger:JSLogger) extends Logger {
